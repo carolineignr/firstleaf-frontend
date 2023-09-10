@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
-import './App.css';
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+
+import NotFound from '../pages/NotFound';
+import Home from '../pages/Home';
+import './App.scss';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Home />}>
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  )
+)
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Countries Of The World</h1>
-        </header>
-      </div>
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
     );
   }
 }
