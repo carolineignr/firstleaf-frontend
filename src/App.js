@@ -3,13 +3,13 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 
 import NotFound from './pages/NotFound';
 import Home from './pages/App';
-import Movies from './pages/Movies';
+import Countries from './pages/Countries';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Home />}>
       <Route path="*" element={<NotFound />} />
-      <Route path='movies' element={<Movies />} />
+      <Route path='countries' element={<Countries />} />
     </Route>
   )
 )

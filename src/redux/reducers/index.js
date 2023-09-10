@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { moviesReducer } from '../slicers';
+import { countriesReducer } from '../slicers';
 
 const rootReducer = combineReducers({
-  movies: moviesReducer
+  countries: countriesReducer
 });
 
 export default rootReducer;

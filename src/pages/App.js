@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { fetchMovies } from "../redux/actions";
+import { fetchCountries } from "../redux/actions";
 import { Link, Outlet } from "react-router-dom";
 
 function Home() {
   const dispatch = useDispatch();
-  const fetchMoviesAction = fetchMovies();
+  const fetchCountriesAction = fetchCountries();
 
   {/* todo: remove before submit */ }
   const [showButton, setShowButton] = useState(true);
 
   useEffect(() => {
-    dispatch(fetchMoviesAction);
-  }, [dispatch, fetchMoviesAction]);
+    dispatch(fetchCountriesAction);
+  }, [dispatch, fetchCountriesAction]);
 
   return (
     <div>
@@ -21,7 +21,7 @@ function Home() {
       </header>
 
       {/* todo: remove before submit */}
-      {showButton && <Link to='movies' onClick={() => setShowButton(false)}>Show movies</Link>}
+      {showButton && <Link to='countries' onClick={() => setShowButton(false)}>Show countries</Link>}
       <Outlet />
     </div>
   )

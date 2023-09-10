@@ -1,1 +1,1 @@
-export { default as moviesReducer, setMovies } from './movies';
+export { default as countriesReducer, setCountries } from './countries';
