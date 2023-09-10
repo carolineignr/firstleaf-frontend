@@ -1,0 +1,1 @@
+export { default as moviesReducer, setMovies } from './movies';
