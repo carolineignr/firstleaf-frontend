@@ -1,0 +1,67 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.card {
+  @include border-radius;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 330px;
+  height: 170px;
+  padding: 1rem;
+  margin: .5rem 0;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  color: black;
+  background-color: white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    border: 5px solid $primary-color;
+  }
+
+  &Header {
+    display: flex;
+    align-items: center;
+    font-size: $font-small;
+
+    img {
+      width: 50px;
+      margin-right: 1rem;
+    }
+  }
+
+  &Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: $font-small;
+
+    &_link {
+      @include border-radius;
+
+      padding: .5rem;
+      margin-left: .5rem;
+      border: 1px solid $third-color;
+      color: $third-color;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $third-color;
+        color: white;
+      }
+    }
+
+    &_infos {
+      display: flex;
+      flex-direction: column;
+
+      div {
+        margin-top: .3rem;
+      }
+    }
+  }
+}

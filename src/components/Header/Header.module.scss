@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+@keyframes moveHorizontal {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+.header {
+  position: relative;
+  height: 40px;
+  padding: 1rem;
+  background-color: $primary-color;
+  color: $third-color;
+  font-size: $font-larger;
+  font-family: $secondary-font;
+
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+
+  .title {
+    position: absolute;
+    margin-right: 30px;
+    top: 25px;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+    animation: moveHorizontal 20s linear infinite both;
+
+    // &::after {
+    //   content: '';
+    //   display: inline-block;
+    //   background-color: $third-color;
+    //   margin-left: 50%;
+    //   margin-bottom: 12px;
+    //   width: 5px;
+    //   height: 5px;
+    //   border-radius: 50%;
+    // }
+  }
+
+  .title2 {
+    animation-delay: 5s;
+  }
+
+  .title3 {
+    animation-delay: 10s;
+  }
+
+  .title4 {
+    animation-delay: 15s;
+  }
+}
+
+// set header style for mobile

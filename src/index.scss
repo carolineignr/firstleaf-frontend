@@ -1,12 +1,27 @@
+@import './styles/variables';
+@import './styles/mixins';
+
 body {
   margin: 0;
+  padding: 0;
+  background-color: $secondary-color;
+  font-family: $primary-font;
 }
 
-.header {
-  background-color: #222;
-  height: 55px;
-  padding: 20px;
-  color: white;
-  font-size: 1.5em;
-  text-align: center;
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: $vw-desktop;
+}
+
+.cards-container {
+  display: flex;
+  max-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: scroll;
+}
+
+.full-width-img {
+  width: 100%;
 }

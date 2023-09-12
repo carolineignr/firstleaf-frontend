@@ -1,29 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchCountries } from "../redux/actions";
 import { Link, Outlet } from "react-router-dom";
 
+import Header from "../components/Header/Header";
+
 function Home() {
   const dispatch = useDispatch();
   const fetchCountriesAction = fetchCountries();
-
-  {/* todo: remove before submit */ }
-  const [showButton, setShowButton] = useState(true);
 
   useEffect(() => {
     dispatch(fetchCountriesAction);
   }, [dispatch, fetchCountriesAction]);
 
   return (
-    <div>
-      <header className="header">
-        <h1>Countries Of The World</h1>
-      </header>
-
-      {/* todo: remove before submit */}
-      {showButton && <Link to='countries' onClick={() => setShowButton(false)}>Show countries</Link>}
+    <>
+      <Header />
       <Outlet />
-    </div>
+      {/* <Link to='/countries'>See countries</Link> */}
+    </>
   )
 }
 
