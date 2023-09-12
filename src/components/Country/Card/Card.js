@@ -1,7 +1,7 @@
 import styles from './Card.module.scss';
 
-export default function Card(props) {
-  const { name, capital, population, flags } = props.country;
+export default function Card({ country, onClickDetailsBtn }) {
+  const { name, capital, population, flags } = country;
 
   return (
     <div className={styles.card}>
@@ -14,7 +14,7 @@ export default function Card(props) {
           <span>Capital: {capital || 'Unknown'}</span>
           <span>Population: {population || 'Unknown'}</span>
         </div>
-        <div className={styles.cardFooter_link}>
+        <div className={styles.cardFooter_link} onClick={onClickDetailsBtn}>
           See details
         </div>
       </div>
