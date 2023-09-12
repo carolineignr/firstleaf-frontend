@@ -1,1 +1,1 @@
-export { default as countriesReducer, setCountries } from './countries';
+export { default as countriesReducer, setCountries, setFilteredCountries } from './countries';

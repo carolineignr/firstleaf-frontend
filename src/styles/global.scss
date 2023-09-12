@@ -1,0 +1,47 @@
+@import './variables';
+@import './mixins';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $secondary-color;
+  font-family: $primary-font;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: $vw-desktop;
+}
+
+.cards-container {
+  display: flex;
+  max-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: scroll;
+}
+
+.initialButton {
+  @include border-radius;
+
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  background-color: $secondary-color;
+  border: 5px solid $primary-color;
+  color: $primary-color;
+  padding: 1rem 2rem;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-color;
+    color: $third-color;
+    border-color: $third-color;
+  }
+}
+
+.full-width-img {
+  width: 100%;
+}

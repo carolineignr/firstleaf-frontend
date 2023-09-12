@@ -1,4 +1,4 @@
-import { setCountries } from "../slicers";
+import { setCountries, setFilteredCountries } from "../slicers";
 import { getCountries } from "../../api/client";
 
 export const fetchCountries = () => {
@@ -7,7 +7,13 @@ export const fetchCountries = () => {
       const data = await getCountries();
       dispatch(setCountries({ data }));
     } catch (e) {
-      console.log('Error while fetching countries data: ', e);
+      console.log('Error while setting countries data: ', e);
     }
   }
 };
+
+export const setFilteredCountriesAct = (data) => {
+  return (dispatch) => {
+    dispatch(setFilteredCountries({ data }));
+  }
+}

@@ -1,1 +1,1 @@
-export { fetchCountries } from "./countries";
+export { fetchCountries, setFilteredCountriesAct } from "./countries";

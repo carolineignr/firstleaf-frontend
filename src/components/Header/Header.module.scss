@@ -28,32 +28,29 @@
     margin-right: 30px;
     top: 25px;
     text-transform: uppercase;
-
     white-space: nowrap;
     animation: moveHorizontal 20s linear infinite both;
-
-    // &::after {
-    //   content: '';
-    //   display: inline-block;
-    //   background-color: $third-color;
-    //   margin-left: 50%;
-    //   margin-bottom: 12px;
-    //   width: 5px;
-    //   height: 5px;
-    //   border-radius: 50%;
-    // }
   }
 
-  .title2 {
+  .animateTitle2 {
+    @extend .title;
     animation-delay: 5s;
   }
 
-  .title3 {
+  .animateTitle3 {
+    @extend .title;
     animation-delay: 10s;
   }
 
-  .title4 {
+  .animateTitle4 {
+    @extend .title;
     animation-delay: 15s;
+  }
+}
+
+@media (max-width: $vw-mobile--header) {
+  .title {
+    font-size: $font-small;
   }
 }
 

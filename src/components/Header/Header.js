@@ -4,10 +4,10 @@ export default function Header() {
   const text = 'Countries Of The World';
   return (
     <header className={styles.header}>
-      <span className={styles.title}>{text}</span>
-      <span className={`${styles.title} ${styles.title2}`}>{text}</span>
-      <span className={`${styles.title} ${styles.title3}`}>{text}</span>
-      <span className={`${styles.title} ${styles.title4}`}>{text}</span>
+      <span className={`${styles.title}`}>{text}</span>
+      <span className={`${styles.title} ${styles.animateTitle2}`}>{text}</span>
+      <span className={`${styles.title} ${styles.animateTitle3}`}>{text}</span>
+      <span className={`${styles.title} ${styles.animateTitle4}`}>{text}</span>
     </header>
   )
 }

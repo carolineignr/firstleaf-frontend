@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  countries: null,
+  countries: [],
+  filteredCountries: []
 }
 
 export const countriesSlicer = createSlice({
@@ -11,9 +12,12 @@ export const countriesSlicer = createSlice({
     setCountries: (state, action) => {
       state.countries = action.payload.data
     },
+    setFilteredCountries: (state, action) => {
+      state.filteredCountries = action.payload.data
+    }
   },
 })
 
-export const { setCountries } = countriesSlicer.actions;
+export const { setCountries, setFilteredCountries } = countriesSlicer.actions;
 
 export default countriesSlicer.reducer;
