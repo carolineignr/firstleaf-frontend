@@ -41,8 +41,7 @@ function countries() {
   function openDetailsModal(country) {
     const modalElement = document.getElementById('modal');
     if (modalElement) {
-      console.log(country);
-      // setCountryDetails(country)
+      setCountryDetails(country)
       modalElement.classList.add('fade-in');
     }
   }
@@ -61,10 +60,10 @@ function countries() {
       <div className="cards-container">
         {hasCountries ? state.filteredCountries.map((country, index) =>
           <Card key={index} country={country} onClickDetailsBtn={() => openDetailsModal(country)} />
-        ) : <p>No countries yet</p>}
+        ) : <p>No countries</p>}
       </div>
 
-      <Details onClose={closeDetailsModal} country={countryDetails} />
+      {<Details onClose={closeDetailsModal} country={countryDetails} />}
     </div>
   )
 }
