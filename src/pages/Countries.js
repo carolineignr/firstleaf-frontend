@@ -63,7 +63,7 @@ function countries() {
         ) : <p>No countries</p>}
       </div>
 
-      {<Details onClose={closeDetailsModal} country={countryDetails} />}
+      <Details onClose={closeDetailsModal} country={countryDetails} />
     </div>
   )
 }

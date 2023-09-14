@@ -63,7 +63,7 @@ export default function Details({ onClose, country }) {
         <div className={styles.tagsContainer}>
           {renderIndependencyTag(country?.independent)}
           {renderONUTag(country?.unMember)}
-          {renderLitoralAccessTag(!country?.landlocked)}
+          {renderLitoralAccessTag(country?.landlocked)}
         </div>
 
         <div className={styles.generalInfoContainer}>
@@ -73,7 +73,7 @@ export default function Details({ onClose, country }) {
             <span className={styles.detail}>habitants</span>
           </div>
 
-          {country && renderCurrency(country.currencies)}
+          {country && renderCurrency(country?.currencies)}
 
           <div className={styles.card}>
             <span className={styles.title}>Total area</span>
@@ -88,6 +88,6 @@ export default function Details({ onClose, country }) {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   )
 }

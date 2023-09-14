@@ -2,9 +2,15 @@
   "name": "countriesoftheworld",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll --coverage",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.35",
     "@reduxjs/toolkit": "^1.9.5",
-    "google-maps-react": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
@@ -13,14 +19,10 @@
     "redux": "^4.2.1",
     "sass": "^1.66.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/react": "^9.1.4",
     "react-scripts": "^4.0.1"
   },
   "browserslist": {
