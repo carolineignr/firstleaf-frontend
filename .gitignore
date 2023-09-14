@@ -52,3 +52,6 @@ docs/
 
 # Exclude Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Tests
+coverage/
