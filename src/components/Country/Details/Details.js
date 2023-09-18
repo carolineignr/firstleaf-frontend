@@ -56,8 +56,7 @@ export default function Details({ onClose, country }) {
         <div className={styles.flagAndMap}>
           <img src={country?.flags.png} alt={country?.flags.alt} width='400' height='200' />
           {/* todo: move apiKey value to .env file */}
-          {/* todo: remove api key from repository after challenge validation */}
-          {country && <Wrapper apiKey="AIzaSyAONLCKAM7meqYFfzVnwaON3hCKhPbIjp4">
+          {country && <Wrapper apiKey="">
             <MapGoogle center={{ lat: country?.latlng[0], lng: country?.latlng[1] }} />
           </Wrapper>}
         </div>
