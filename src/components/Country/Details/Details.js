@@ -65,7 +65,7 @@ export default function Details({ onClose, country }) {
         <div className={styles.tagsContainer}>
           {renderIndependencyTag(country?.independent)}
           {renderONUTag(country?.unMember)}
-          {renderLitoralAccessTag(country?.landlocked)}
+          {renderLitoralAccessTag(!country?.landlocked)}
         </div>
 
         <div className={styles.generalInfoContainer}>
