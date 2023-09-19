@@ -1,4 +1,4 @@
-# Firstleaf Take Home Project
+# React project
 
 API used: https://restcountries.com/v3.1/all 
 
