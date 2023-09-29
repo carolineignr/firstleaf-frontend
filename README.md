@@ -1,7 +1,4 @@
-# React project
+### World countries
 
-API used: https://restcountries.com/v3.1/all 
-
-Node version used: 16
-
-React version used: 18
+Responsive web application using React v18 and Node v16.
+Here is the [API](https://restcountries.com/v3.1/all) used to get countries informations.

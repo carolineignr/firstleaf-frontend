@@ -11,6 +11,7 @@ function Home() {
   const fetchCountriesAction = fetchCountries();
 
   useEffect(() => {
+    console.log(process.env)
     dispatch(fetchCountriesAction);
   }, [dispatch, fetchCountriesAction]);
 
